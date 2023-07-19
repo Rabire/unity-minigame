@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     float speed = 7f;
 
+    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask ground;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector3(horizontalInput * speed, rb.velocity.y, verticalInput * speed);
 
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") && IsGrounded())
         {
             rb.velocity = new Vector3(rb.velocity.x, speed, rb.velocity.y);
         }
+    }
+
+    bool IsGrounded()
+    {
+        return Physics.CheckSphere(groundCheck.position, 0.1f, LayerMask.GetMask("Ground"));
     }
 }
