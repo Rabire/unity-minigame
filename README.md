@@ -3,7 +3,7 @@
 ## Critères de notation
 
 - [x] Déplacer le personnage avec les touches ZQSD : 2pts
-- [ ] Animer le personnage 3D : 1pt
+- [x] Animer le personnage 3D : 1pt
 - [x] Empêcher le personnage de passer à travers les obstacles : 1pt
 - [x] Ramasser des objets et marquer des points : 2pts
 - [x] Ramasser tous les objets déclenche la fin de partie (victoire) : 2pts

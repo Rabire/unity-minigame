@@ -10,10 +10,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
 
+    Animator animator;
+
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,14 +28,18 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector3(horizontalInput * speed, rb.velocity.y, verticalInput * speed);
 
-        if (Input.GetKey("space") && IsGrounded())
+        if(horizontalInput != 0 || verticalInput != 0)
         {
-            rb.velocity = new Vector3(rb.velocity.x, speed, rb.velocity.y);
+            animator.SetBool("isWalking", true);
         }
-    }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
 
-    bool IsGrounded()
-    {
-        return Physics.CheckSphere(groundCheck.position, 0.1f, LayerMask.GetMask("Ground"));
+        if (Input.GetKey("space"))
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 7f, rb.velocity.y);
+        }
     }
 }
