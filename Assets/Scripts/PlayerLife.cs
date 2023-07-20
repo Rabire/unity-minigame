@@ -9,12 +9,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (transform.position.y < -2f)
         {
-            ReloadLevel();
+            SceneManager.LoadScene(3);
         }
-    }
-
-    void ReloadLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsText: {fileID: 1415320863}
+  timerText: {fileID: 1221090003}
 --- !u!4 &1117290434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7364904693709537118, guid: 797f702c2f5e447799629643012b0b02, type: 3}
