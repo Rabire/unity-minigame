@@ -1,5 +1,7 @@
 # ISITECH – Introduction à Unity – 2022-2023
 
+![image](https://github.com/Rabire/unity-minigame/assets/49844846/44b0657d-47eb-493d-b6f3-1d2bf32f0b28)
+
 ## Critères de notation
 
 - [x] Déplacer le personnage avec les touches ZQSD : 2pts
